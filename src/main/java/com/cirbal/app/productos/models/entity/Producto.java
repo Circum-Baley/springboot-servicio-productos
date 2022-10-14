@@ -14,10 +14,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
+//Nombre que se le da en la base de datos
 @Table(name = "producto")
 public class Producto implements Serializable{
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -27,6 +26,7 @@ public class Producto implements Serializable{
 	@Column(name="price")
 	private Double precio;
 	@Column(name = "create_at")
+	// convierte en  la base de datos del package util a sql;(depende en que formato se requiera) 
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
 	
