@@ -25,7 +25,7 @@ public class Producto implements Serializable{
 	private String nombre;
 	@Column(name="price")
 	private Double precio;
-	@Column(name = "create_at")
+	@Column(name = "created_at")
 	// convierte en  la base de datos del package util a sql;(depende en que formato se requiera) 
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
